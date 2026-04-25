@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6366F1",
+              secondary: "#8B5CF6",
+              accent: "#F59E0B",
+              surface: "#FFFFFF",
+              "surface-alt": "#F8FAFC",
+              ink: "#0F172A",
+              "ink-subtle": "#475569",
+              success: "#10B981",
+              danger: "#EF4444",
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "lg": "1rem",
+              "xl": "1.5rem",
+              "full": "9999px",
+            },
+            fontFamily: {
+              headline: ["Geist"],
+              display: ["Geist"],
+              body: ["Geist"],
+              label: ["Inter"],
+            },
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        vertical-align: middle;
+      }
+      body { font-family: 'Geist', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-ink antialiased">
+<!-- SideNavBar Component -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col p-4 bg-slate-50 dark:bg-slate-950 h-screen w-64 border-r border-slate-200 dark:border-slate-800 font-sans antialiased text-slate-900 dark:text-slate-100">
+<div class="mb-8 px-4">
+<h1 class="text-xl font-bold tracking-tight text-indigo-600 dark:text-indigo-400">AI Lab</h1>
+<p class="text-xs text-ink-subtle font-label">Researcher Pro</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:bg-slate-100 dark:hover:bg-slate-900 transition-all active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="font-label">Workspace</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-xl font-semibold active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">folder_open</span>
+<span class="font-label">Library</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:bg-slate-100 dark:hover:bg-slate-900 transition-all active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-label">Drafts</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:bg-slate-100 dark:hover:bg-slate-900 transition-all active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label">Settings</span>
+</a>
+</nav>
+<button class="mb-4 w-full bg-primary text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2 shadow-lg shadow-indigo-200 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+            New Project
+        </button>
+<div class="mt-auto pt-4 border-t border-slate-200">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:bg-slate-100 dark:hover:bg-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="font-label">Help Center</span>
+</a>
+<div class="flex items-center gap-3 px-4 py-3 mt-2">
+<div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold text-xs overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALstsybz_iCLGY45NuhDZ2FqBffoqcKC-AIuWSqTW5B3cNfJL5kn-qGkppXnBS35r85v6Hnk67uwsOkpmhMFKmEa04g1vTOTsgKKzH74KXi82jxhHUctvX0qlSHyeBh-VsUPB1fsEKv5e5m_Zlj7yaZfkm-jgd26vdgsMX3t2-FIsRuiU6_3LIcf4cN-03xKiK88CoLsZT_rwBrxsfROHPa5Mywaw9j0vRnQlZwp3CjfZCQauazL_7ueHmbtDCBYQgzrov2FLSVAo"/>
+</div>
+<div class="flex-1 overflow-hidden">
+<p class="text-sm font-medium truncate">Dr. K. Park</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-64 min-h-screen">
+<!-- TopAppBar Component (Integrated) -->
+<header class="sticky top-0 z-30 flex items-center justify-between w-full px-8 py-6 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
+<div>
+<h2 class="text-3xl font-bold tracking-tight text-ink font-headline">Library</h2>
+<p class="text-ink-subtle mt-1 text-sm">생성한 그림과 블로그 초안을 한 자리에서 검색·재편집</p>
+</div>
+<div class="flex items-center gap-4 w-1/3">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 border-none rounded-xl focus:ring-2 focus:ring-indigo-500 text-sm font-label" placeholder="제목·태그·내용 검색" type="text"/>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-lg transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-lg transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<div class="px-8 pb-12">
+<!-- Sub-header Filter & Sort -->
+<div class="flex items-center justify-between mb-8">
+<nav class="flex gap-8 border-b border-slate-200 w-full max-w-md">
+<button class="pb-3 text-indigo-600 border-b-2 border-indigo-600 font-semibold px-2">전체</button>
+<button class="pb-3 text-slate-500 hover:text-slate-800 transition-colors px-2">그림</button>
+<button class="pb-3 text-slate-500 hover:text-slate-800 transition-colors px-2">블로그</button>
+</nav>
+<div class="flex items-center gap-2 bg-white border border-slate-200 px-3 py-1.5 rounded-lg text-sm font-medium text-slate-700 cursor-pointer hover:bg-slate-50">
+<span class="material-symbols-outlined text-sm">sort</span>
+                    최신순
+                    <span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</div>
+<!-- Content Area Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: Figure -->
+<div class="group bg-white rounded-xl border border-slate-200 overflow-hidden hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="aspect-video relative overflow-hidden bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center p-8">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" data-alt="clean isometric diagram of a neural network architecture with glowing nodes and indigo lines on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALX4dlvkBo2WsfiGeI_w5A2YQpFATt55LCMi7vBC4r0W6MrWtnq6smrMnOHvXMqFi1TtofqqLhbgQ3t0zLnj-Ud-jNQQSNTspm8U5qMEkyPdVOjoYKx-CeBY0HylGuIWKd4j0mSXKTs9HqUF4iHPwmRNo3fki_XD_0YXsrHceoDIHUn1Xd_zGf0JeyRvvBCzCBqepbi4SJODk0kw02Rg0dEnNw4t3y_GD2b5mimy1YU3jEf4tplJZFHh-LVSN6MqXJFEfUjoplqf4"/>
+<span class="material-symbols-outlined text-white text-6xl opacity-90 drop-shadow-lg">schema</span>
+</div>
+<div class="p-5">
+<h3 class="text-ink font-bold text-lg leading-tight mb-3 line-clamp-2">Transformer Attention Mechanism Visualization - v2 Final</h3>
+<div class="flex items-center justify-between mt-4">
+<div class="flex gap-2">
+<span class="px-2 py-0.5 bg-indigo-50 text-indigo-600 text-xs font-semibold rounded-full border border-indigo-100">Transformer</span>
+</div>
+<span class="text-xs text-ink-subtle font-label">2시간 전</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Blog -->
+<div class="group bg-white rounded-xl border border-slate-200 overflow-hidden hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="aspect-video relative bg-slate-50 flex flex-col p-6 border-b border-slate-100">
+<div class="space-y-3 opacity-60">
+<div class="h-4 w-3/4 bg-slate-200 rounded"></div>
+<div class="h-4 w-full bg-slate-200 rounded"></div>
+<div class="h-4 w-5/6 bg-slate-200 rounded"></div>
+<div class="h-4 w-full bg-slate-200 rounded"></div>
+<div class="h-4 w-2/3 bg-slate-200 rounded"></div>
+</div>
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/notebook.png')] opacity-10"></div>
+<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-indigo-500">article</span>
+</div>
+</div>
+<div class="p-5">
+<h3 class="text-ink font-bold text-lg leading-tight mb-3 line-clamp-2">Next.js 14 App Router 마이그레이션 트러블슈팅 가이드</h3>
+<div class="flex items-center justify-between mt-4">
+<div class="flex gap-2">
+<span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs font-semibold rounded-full border border-slate-200">Trouble Shooting</span>
+</div>
+<span class="text-xs text-ink-subtle font-label">3시간 전</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Figure -->
+<div class="group bg-white rounded-xl border border-slate-200 overflow-hidden hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="aspect-video relative overflow-hidden bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center p-8">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-multiply" data-alt="minimalist abstract geometric 3D shapes floating in a warm amber light with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO4X9kVwWYvEslCjv-mBysftxdK6hsWKEiuCyNvM0bQ9fIFlwRkZFLFm4c6sm5V8kj0cboq21QUOX5Q_S5zGis0QJzdnctMmHNtdDgk5646T9kaaXVEkKnmNWMJ9DyzsiwT6lmRNmfj8EC4-MZ8fEOzFTOP2nad_J8dAa8L3TGgI0-lg_Uzqk_HvCtAtP3FM5KEUmlUrdeZD_gOJiCMQ0cvv6lDXdNTQk5UY3hxGrjBRmEvG9fPZ5ceyZcrzes4-U1PnGJlm82vHc"/>
+<span class="material-symbols-outlined text-white text-6xl opacity-90 drop-shadow-lg">model_training</span>
+</div>
+<div class="p-5">
+<h3 class="text-ink font-bold text-lg leading-tight mb-3 line-clamp-2">Diffusion Model Forward/Reverse Process Diagram</h3>
+<div class="flex items-center justify-between mt-4">
+<div class="flex gap-2">
+<span class="px-2 py-0.5 bg-amber-50 text-amber-600 text-xs font-semibold rounded-full border border-amber-100">Diffusion</span>
+</div>
+<span class="text-xs text-ink-subtle font-label">어제</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Blog -->
+<div class="group bg-white rounded-xl border border-slate-200 overflow-hidden hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="aspect-video relative bg-slate-50 flex flex-col p-6 border-b border-slate-100">
+<div class="space-y-3 opacity-60">
+<div class="h-4 w-2/3 bg-slate-200 rounded"></div>
+<div class="h-4 w-full bg-slate-200 rounded"></div>
+<div class="h-4 w-full bg-slate-200 rounded"></div>
+<div class="h-4 w-1/2 bg-slate-200 rounded"></div>
+</div>
+<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-indigo-500">history_edu</span>
+</div>
+</div>
+<div class="p-5">
+<h3 class="text-ink font-bold text-lg leading-tight mb-3 line-clamp-2">LLM Context Window 확장에 따른 Reranking 전략 분석</h3>
+<div class="flex items-center justify-between mt-4">
+<div class="flex gap-2">
+<span class="px-2 py-0.5 bg-indigo-50 text-indigo-600 text-xs font-semibold rounded-full border border-indigo-100">RAG</span>
+</div>
+<span class="text-xs text-ink-subtle font-label">어제</span>
+</div>
+</div>
+</div>
+<!-- Card 5: Figure -->
+<div class="group bg-white rounded-xl border border-slate-200 overflow-hidden hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="aspect-video relative overflow-hidden bg-gradient-to-br from-indigo-700 to-indigo-900 flex items-center justify-center p-8">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-overlay" data-alt="conceptual digital representation of a server cluster with glowing blue accents and high tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa2R7mSp0xUmyI3jUNvOWoK3gNz-edfK6jo3erIN4VxAWoxbIlyywip_wRIS5fxCmDcoXDZScUsRfoupa5JQBvX533HOxLqRwW5RutZ3o-DNx-7MUDX3OS4h5zwS5hgZzibkmm0lvDkZAJi8pS_6nLvV3AJirJaNxbY8rOx2ZIqzfDdBFAmWizT2UvbGfzit1yff6J-GFPzFSkeMz59raxIWERoF-4tTFTcAqQzMJG-KYAAHGQchIQsEGeRIV_0cK2UqOgnbFwEXw"/>
+<span class="material-symbols-outlined text-white text-6xl opacity-90 drop-shadow-lg">hub</span>
+</div>
+<div class="p-5">
+<h3 class="text-ink font-bold text-lg leading-tight mb-3 line-clamp-2">Distributed System Architecture for Scale-out</h3>
+<div class="flex items-center justify-between mt-4">
+<div class="flex gap-2">
+<span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs font-semibold rounded-full border border-slate-200">System Design</span>
+</div>
+<span class="text-xs text-ink-subtle font-label">지난 주</span>
+</div>
+</div>
+</div>
+<!-- Card 6: Blog -->
+<div class="group bg-white rounded-xl border border-slate-200 overflow-hidden hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="aspect-video relative bg-slate-50 flex flex-col p-6 border-b border-slate-100">
+<div class="space-y-3 opacity-60">
+<div class="h-4 w-5/6 bg-slate-200 rounded"></div>
+<div class="h-4 w-full bg-slate-200 rounded"></div>
+<div class="h-4 w-3/4 bg-slate-200 rounded"></div>
+</div>
+<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-indigo-500">article</span>
+</div>
+</div>
+<div class="p-5">
+<h3 class="text-ink font-bold text-lg leading-tight mb-3 line-clamp-2">PyTorch Distributed Data Parallel(DDP) 깊게 파기</h3>
+<div class="flex items-center justify-between mt-4">
+<div class="flex gap-2">
+<span class="px-2 py-0.5 bg-indigo-50 text-indigo-600 text-xs font-semibold rounded-full border border-indigo-100">Training</span>
+</div>
+<span class="text-xs text-ink-subtle font-label">지난 주</span>
+</div>
+</div>
+</div>
+<!-- Card 7: Figure -->
+<div class="group bg-white rounded-xl border border-slate-200 overflow-hidden hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="aspect-video relative overflow-hidden bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center p-8">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-soft-light" data-alt="schematic blueprint of a microchip with glowing circuit paths and violet highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzOGQktTis5oUFJuzydcdek8KT51kvfljidhBnnEE9xZd59cH7EOV9pRxJ5QZmkXrS3NNZJnAq8r-aeG6h1Qzvuwx24UQUDTVOHUGGxzX6wo1-MpNah84JA6Gt0pjJfH7lMIVQAt008460evjwnOqmHOv5_XEs0jyonr_D5bFH6RVJUn3LIsjcBZAKDOeYKKSCfgr5oQtzSLiTUm7Gnon2Rau4muUEo6rKNRJqR8rVm5c4duq6fCY_FThREr7r3IPwPZrqTwPkViU"/>
+<span class="material-symbols-outlined text-white text-6xl opacity-90 drop-shadow-lg">memory</span>
+</div>
+<div class="p-5">
+<h3 class="text-ink font-bold text-lg leading-tight mb-3 line-clamp-2">Hardware-aware Quantization Strategy Diagram</h3>
+<div class="flex items-center justify-between mt-4">
+<div class="flex gap-2">
+<span class="px-2 py-0.5 bg-violet-50 text-violet-600 text-xs font-semibold rounded-full border border-violet-100">Optimization</span>
+</div>
+<span class="text-xs text-ink-subtle font-label">지난 주</span>
+</div>
+</div>
+</div>
+<!-- Card 8: Blog -->
+<div class="group bg-white rounded-xl border border-slate-200 overflow-hidden hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="aspect-video relative bg-slate-50 flex flex-col p-6 border-b border-slate-100">
+<div class="space-y-3 opacity-60">
+<div class="h-4 w-full bg-slate-200 rounded"></div>
+<div class="h-4 w-1/2 bg-slate-200 rounded"></div>
+<div class="h-4 w-full bg-slate-200 rounded"></div>
+</div>
+<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-indigo-500">article</span>
+</div>
+</div>
+<div class="p-5">
+<h3 class="text-ink font-bold text-lg leading-tight mb-3 line-clamp-2">React 18 Concurrent Mode: Transitions and Suspense</h3>
+<div class="flex items-center justify-between mt-4">
+<div class="flex gap-2">
+<span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs font-semibold rounded-full border border-slate-200">Frontend</span>
+</div>
+<span class="text-xs text-ink-subtle font-label">지난 달</span>
+</div>
+</div>
+</div>
+<!-- Card 9: Figure -->
+<div class="group bg-white rounded-xl border border-slate-200 overflow-hidden hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="aspect-video relative overflow-hidden bg-gradient-to-br from-indigo-400 to-cyan-500 flex items-center justify-center p-8">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40" data-alt="Earth from space with glowing data network nodes connected by bright lines representing global connectivity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlpDc-NLN0b-tm5SG0XYhJ_dgQaL5DemanUE1dtEPzQ3yQUw38fUBwa5c_u94CF3DDgY1-xXIkLolUy28Vx73pZKHQp7uKQRFOTv3kvu6tZ6zRVBaP6jyVAl5FLJkad86-u3IWHbNbX83N9SSE9HWZTiMERWEkUV8f12nx57LKD0QWpjQrnLW-yTQ1GBgGdhOg9L3_NoxUyVBubQpTbA9X1C7nStXa1yn1kD3QDIgD-cVByBpp4g6q-4IJ1T7w275ItbDjuxNCeoo"/>
+<span class="material-symbols-outlined text-white text-6xl opacity-90 drop-shadow-lg">language</span>
+</div>
+<div class="p-5">
+<h3 class="text-ink font-bold text-lg leading-tight mb-3 line-clamp-2">Multilingual LLM Training Pipeline Flowchart</h3>
+<div class="flex items-center justify-between mt-4">
+<div class="flex gap-2">
+<span class="px-2 py-0.5 bg-indigo-50 text-indigo-600 text-xs font-semibold rounded-full border border-indigo-100">NLP</span>
+</div>
+<span class="text-xs text-ink-subtle font-label">지난 달</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

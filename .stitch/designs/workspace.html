@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Research Lab - Workspace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#6366F1",
+                        secondary: "#8B5CF6",
+                        accent: "#F59E0B",
+                        surface: "#FFFFFF",
+                        ink: "#0F172A",
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px",
+                        "ROUND_TWELVE": "0.75rem"
+                    },
+                    fontFamily: {
+                        headline: ["Geist"],
+                        display: ["Geist"],
+                        body: ["Geist"],
+                        label: ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .paper-grid {
+            background-image: radial-gradient(#cbd5e1 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-body text-ink antialiased">
+<!-- SideNavBar (Authority Source: JSON) -->
+<aside class="fixed left-0 top-0 bottom-0 flex flex-col p-4 w-[260px] h-screen border-r border-slate-200 bg-slate-50 font-sans Geist antialiased">
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div>
+<h1 class="text-xl font-bold text-indigo-600">AI Research Lab</h1>
+<p class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">Text-to-Image Workspace</p>
+</div>
+</div>
+<button class="mb-6 w-full py-2.5 px-4 bg-indigo-600 text-white rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-indigo-700 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+            New Project
+        </button>
+<nav class="flex-1 space-y-1">
+<!-- Active Tab: Paper→Figure -->
+<a class="flex items-center gap-3 px-3 py-2.5 bg-indigo-50 text-indigo-700 font-semibold rounded-xl Active: opacity-90 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="article">article</span>
+<span class="text-sm">Paper→Figure</span>
+</a>
+<!-- Inactive Tab -->
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span class="text-sm">Dev Log→Blog</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+<span class="text-sm">Library</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-slate-200 pt-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="text-sm">Support</span>
+</a>
+<div class="flex items-center gap-3 px-2 py-4 mt-2">
+<img alt="User Avatar" class="w-10 h-10 rounded-full border-2 border-white shadow-sm" data-alt="Professional headshot of a young male researcher with glasses in a modern office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSkZ2zYeFJasD9feZJl66-BeHjMfIR57zVvhnrtYUyx0iPZwG5G731HEVrJWpTrr3DvfJ1M4-Jqee03iOMxm1OiXOHlXzGsK84-SsagyqXqjrSFj87m6OWbt0GgKoPcxuG_8TqGvm7IIVnXWkU7d4uOSKvXqIEIGbci0VQ5ht8cuUO78Js9kmzjjqFrLH6Fs7BF2_IGNRQr6e3vp8JbspEY8s7xP5pzjXFi5AgY26vKcA1aLoFYvuR2qI5yUN9TzEHHKBMO7zBAIw"/>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900">Dr. Aris</span>
+<span class="text-[11px] text-slate-500">Pro Researcher</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar (Authority Source: JSON) -->
+<header class="fixed top-0 right-0 left-0 flex justify-between items-center px-6 w-[calc(100%-260px)] ml-[260px] h-16 bg-white/80 backdrop-blur-md border-b border-slate-200 z-10 font-sans Inter tracking-tight">
+<div class="flex items-center gap-4">
+<h2 class="text-lg font-semibold text-slate-900">Attention Mechanism Visualizer</h2>
+<span class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 text-[11px] font-medium border border-emerald-100">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Saved
+            </span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-4 mr-6">
+<a class="text-slate-500 hover:text-indigo-500 transition-all text-sm font-medium" href="#">Drafts</a>
+<a class="text-indigo-600 border-b-2 border-indigo-600 text-sm font-medium" href="#">Recent</a>
+</div>
+<div class="flex items-center gap-2 border-r border-slate-200 pr-4 mr-2">
+<button class="p-2 text-slate-500 hover:text-indigo-500 transition-all">
+<span class="material-symbols-outlined" data-icon="cloud_done">cloud_done</span>
+</button>
+<button class="p-2 text-slate-500 hover:text-indigo-500 transition-all">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+<button class="p-2 text-slate-500 hover:text-indigo-500 transition-all">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<button class="px-4 py-1.5 text-slate-600 font-medium text-sm hover:bg-slate-100 rounded-lg transition-all Active: scale-95 duration-100">Save</button>
+<button class="px-4 py-1.5 bg-indigo-600 text-white font-medium text-sm rounded-lg hover:bg-indigo-700 transition-all shadow-sm shadow-indigo-200 Active: scale-95 duration-100">Export</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[260px] pt-16 h-screen flex flex-col paper-grid">
+<div class="flex-1 flex p-6 gap-6 overflow-hidden">
+<!-- Left Panel: Paper Input (40%) -->
+<section class="w-[40%] flex flex-col gap-4">
+<div class="bg-white rounded-ROUND_TWELVE border border-slate-200 shadow-sm flex-1 flex flex-col overflow-hidden">
+<div class="p-4 border-b border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-indigo-600" data-icon="description">description</span>
+<span class="font-bold text-sm tracking-tight">Paper Input</span>
+</div>
+<span class="text-[11px] text-slate-400 font-medium">Step 01</span>
+</div>
+<div class="p-4 flex-1 flex flex-col gap-4 custom-scrollbar overflow-y-auto">
+<!-- Upload Area -->
+<div class="border-2 border-dashed border-slate-200 rounded-xl p-8 flex flex-col items-center justify-center bg-slate-50/50 hover:bg-indigo-50/30 hover:border-indigo-200 transition-all group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-white border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-indigo-500 shadow-sm mb-3">
+<span class="material-symbols-outlined" data-icon="upload_file">upload_file</span>
+</div>
+<p class="text-sm font-semibold text-slate-700">Drop your paper PDF here</p>
+<p class="text-xs text-slate-400 mt-1">Maximum file size: 10MB</p>
+</div>
+<!-- Text Input Area -->
+<div class="flex-1 flex flex-col gap-2">
+<label class="text-[11px] font-bold text-slate-400 uppercase tracking-widest font-label">Abstract / Context</label>
+<div class="relative flex-1">
+<textarea class="w-full h-full min-h-[200px] bg-slate-50 border-none rounded-xl p-4 text-sm text-slate-700 leading-relaxed focus:ring-2 focus:ring-indigo-100 resize-none font-body" placeholder="Paste relevant paper sections here...">This paper proposes a novel attention mechanism that dynamically adjusts weights based on contextual relevance. The self-attention layer consists of Queries, Keys, and Values (Q, K, V) interacting through dot-product operations to capture long-range dependencies in sequence modeling. By visualising these relationships, we can better understand the focus points of the LLM during generation...</textarea>
+<div class="absolute bottom-3 right-3 text-[10px] text-slate-400 bg-white/80 px-2 py-1 rounded-full border border-slate-100">
+                                    342 words
+                                </div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-slate-50/50 border-t border-slate-100 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-slate-700">Goal Format</span>
+<span class="text-[10px] text-slate-400">Preferred output style</span>
+</div>
+<div class="bg-white p-1 rounded-full border border-slate-200 flex gap-1">
+<button class="px-4 py-1.5 bg-indigo-600 text-white rounded-full text-xs font-semibold shadow-sm">Diagram</button>
+<button class="px-4 py-1.5 text-slate-500 rounded-full text-xs font-semibold hover:bg-slate-100">Illustration</button>
+</div>
+</div>
+<button class="w-full py-4 bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-xl font-bold flex items-center justify-center gap-3 shadow-lg shadow-indigo-200 hover:scale-[1.01] transition-transform active:scale-95">
+<span class="material-symbols-outlined text-lg" data-icon="auto_awesome" data-weight="fill" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                            Generate Figure
+                        </button>
+</div>
+</div>
+</section>
+<!-- Right Panel: Result Preview (60%) -->
+<section class="w-[60%] flex flex-col gap-4">
+<div class="bg-white rounded-ROUND_TWELVE border border-slate-200 shadow-sm flex-1 flex flex-col overflow-hidden">
+<div class="p-4 border-b border-slate-100 flex items-center justify-between bg-white">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 text-indigo-600 font-bold text-sm border-b-2 border-indigo-600 pb-4 -mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="schema">schema</span>
+                                Diagram
+                            </button>
+<button class="flex items-center gap-2 text-slate-400 font-semibold text-sm pb-4 -mb-4 hover:text-slate-600 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="notes">notes</span>
+                                Caption
+                            </button>
+<button class="flex items-center gap-2 text-slate-400 font-semibold text-sm pb-4 -mb-4 hover:text-slate-600 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="code">code</span>
+                                Raw JSON
+                            </button>
+</div>
+<div class="flex gap-2">
+<button class="p-1.5 rounded-lg border border-slate-200 text-slate-500 hover:bg-slate-50">
+<span class="material-symbols-outlined text-sm" data-icon="zoom_in">zoom_in</span>
+</button>
+<button class="p-1.5 rounded-lg border border-slate-200 text-slate-500 hover:bg-slate-50">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</button>
+</div>
+</div>
+<div class="flex-1 bg-slate-50 relative overflow-hidden group">
+<!-- Preview Canvas -->
+<div class="absolute inset-0 flex items-center justify-center p-12">
+<div class="w-full h-full bg-white rounded-xl shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden flex items-center justify-center relative">
+<!-- Isometric Simulation/Placeholder -->
+<div class="relative w-[80%] aspect-[16/10] bg-white">
+<div class="absolute inset-0 bg-indigo-50/20" style="background-image: radial-gradient(#6366f1 0.5px, transparent 0.5px); background-size: 20px 20px;"></div>
+<div class="relative z-10 w-full h-full flex items-center justify-center">
+<!-- Placeholder Image for Isometric Diagram -->
+<div class="flex flex-col items-center">
+<div class="relative transform -rotate-12 scale-110">
+<div class="w-48 h-32 bg-indigo-100 rounded-lg border-2 border-indigo-200 flex items-center justify-center absolute -top-4 -left-4 opacity-40"></div>
+<div class="w-48 h-32 bg-indigo-600 rounded-lg border-2 border-indigo-700 flex items-center justify-center shadow-lg">
+<span class="text-white font-bold text-xs">Self-Attention Layer</span>
+</div>
+</div>
+<div class="flex gap-8 mt-12 transform -rotate-12">
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-violet-500 flex items-center justify-center text-white text-[10px] font-bold shadow-md">Q</div>
+<span class="text-[9px] text-slate-400 font-bold uppercase">Query</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center text-white text-[10px] font-bold shadow-md">K</div>
+<span class="text-[9px] text-slate-400 font-bold uppercase">Key</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white text-[10px] font-bold shadow-md">V</div>
+<span class="text-[9px] text-slate-400 font-bold uppercase">Value</span>
+</div>
+</div>
+<!-- SVG Arrows would go here in a real impl -->
+<div class="absolute inset-0 pointer-events-none">
+<svg class="w-full h-full opacity-30" viewbox="0 0 400 300">
+<path d="M100,200 Q200,100 300,50" fill="none" stroke="#6366F1" stroke-dasharray="4" stroke-width="2"></path>
+<path d="M150,200 Q200,100 300,50" fill="none" stroke="#6366F1" stroke-dasharray="4" stroke-width="2"></path>
+<path d="M200,200 Q200,100 300,50" fill="none" stroke="#6366F1" stroke-dasharray="4" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Detail Label -->
+<div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm border border-slate-100 p-3 rounded-lg shadow-sm">
+<p class="text-[10px] font-bold text-slate-900 mb-1 uppercase tracking-tighter">Fig 1. Self-Attention Dataflow</p>
+<p class="text-[9px] text-slate-400 leading-tight max-w-[150px]">Isometric representation of Q/K/V interactions within the transformer block.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Controls -->
+<div class="absolute bottom-6 right-6 flex gap-2">
+<button class="bg-white/90 backdrop-blur shadow-lg border border-slate-200 p-2.5 rounded-full text-slate-600 hover:text-indigo-600 transition-colors">
+<span class="material-symbols-outlined" data-icon="refresh">refresh</span>
+</button>
+<button class="bg-white/90 backdrop-blur shadow-lg border border-slate-200 p-2.5 rounded-full text-slate-600 hover:text-indigo-600 transition-colors">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+</button>
+</div>
+</div>
+<div class="p-4 bg-white border-t border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="text-[11px] text-slate-400 font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+                                Generated 2m ago
+                            </span>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-50 border border-amber-100 text-amber-600 text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px]" data-icon="bolt" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                                1.2k tokens
+                            </div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-[11px] text-slate-400">Quality: <span class="text-indigo-600 font-bold">High-Res</span></span>
+<div class="h-3 w-[1px] bg-slate-200"></div>
+<button class="text-xs font-bold text-indigo-600 hover:underline">Regenerate Caption</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Contextual FAB (Suppressed as per rules for Workspace/Details, but showing action logic for intent) -->
+<!-- Not rendered as this is a Task-Focused workspace sub-page -->
+</body></html>

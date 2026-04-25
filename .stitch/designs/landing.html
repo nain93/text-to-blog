@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Geist:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#6366F1",
+                        secondary: "#8B5CF6",
+                        accent: "#F59E0B",
+                        surface: "#FFFFFF",
+                        subsurface: "#F8FAFC",
+                        ink: "#0F172A",
+                        muted: "#475569"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Geist", "sans-serif"],
+                        display: ["Geist", "sans-serif"],
+                        body: ["Geist", "sans-serif"],
+                        label: ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .paper-grid {
+            background-image: radial-gradient(#e2e8f0 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-body text-ink antialiased paper-grid">
+<!-- TopNavBar -->
+<header class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm docked full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4 w-full">
+<div class="flex items-center gap-8">
+<a class="text-xl font-black tracking-tighter text-slate-900 dark:text-white" href="/">text-to-image</a>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-indigo-600 dark:text-indigo-400 font-semibold border-b-2 border-indigo-600 pb-1 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors" href="#">Features</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors" href="#">Workflow</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors" href="#">Pricing</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-white transition-colors px-4 py-2 active:scale-95 transition-transform duration-200">Login</button>
+<button class="bg-indigo-600 text-white px-5 py-2.5 rounded-lg font-semibold shadow-sm hover:bg-indigo-700 active:scale-95 transition-all duration-200">Get Started</button>
+</div>
+</nav>
+</header>
+<main class="max-w-[1200px] mx-auto px-6">
+<!-- Hero Section -->
+<section class="py-20 lg:py-32 grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-bold tracking-wider uppercase">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                    AI-Powered Workspace
+                </div>
+<h1 class="text-5xl lg:text-7xl font-black tracking-tighter leading-[1.1] text-slate-900">
+                    논문은 그림으로,<br/>
+<span class="text-indigo-600">트러블슈팅은 블로그로</span>
+</h1>
+<p class="text-lg text-muted max-w-lg leading-relaxed">
+                    복잡한 연구 데이터와 개발 로그를 단 한 번의 클릭으로 시각화하고 정리하세요.<br/>
+                    연구원과 개발자를 위한 가장 지적인 AI 워크스페이스입니다.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-indigo-200 hover:bg-indigo-700 active:scale-95 transition-all">무료로 시작하기</button>
+<button class="bg-white border border-slate-200 text-slate-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 active:scale-95 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">play_circle</span>
+                        데모 보기
+                    </button>
+</div>
+</div>
+<div class="relative">
+<!-- Decorative background elements -->
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-indigo-200/30 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-12 -left-12 w-64 h-64 bg-violet-200/30 rounded-full blur-3xl"></div>
+<div class="relative space-y-6">
+<!-- Input Card -->
+<div class="glass-card p-6 rounded-xl shadow-lg transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+<div class="flex items-center gap-2 mb-4 border-b border-slate-100 pb-3">
+<div class="w-3 h-3 rounded-full bg-slate-200"></div>
+<div class="w-3 h-3 rounded-full bg-slate-200"></div>
+<span class="text-xs font-mono text-slate-400 ml-2">paper_draft_v2.pdf</span>
+</div>
+<div class="space-y-2">
+<div class="h-2 w-full bg-slate-100 rounded"></div>
+<div class="h-2 w-5/6 bg-slate-100 rounded"></div>
+<div class="h-2 w-4/6 bg-indigo-100 rounded"></div>
+</div>
+</div>
+<!-- Output Card -->
+<div class="glass-card p-2 rounded-xl shadow-2xl transform translate-x-12 -translate-y-4 hover:translate-x-8 transition-transform duration-500">
+<img class="rounded-lg w-full aspect-video object-cover" data-alt="Modern isometric architectural diagram with indigo and violet color palette, showing clean lines and structured connectivity on a paper-like texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTn6EcOt7PZWQw3F6Ebwc5zK-TYmJouZ7bzOe9MU2vJwE0VEwHibwDXqqLq6clc4f3mqPAcXZtsVyD_0uG6QhHXzcZ5HvIirL2ejWd9SwsE3ZCMOeU_cXHm7EwI98nml7W6bR61ZnFTd9-sMQGgg04HPl4o9JsqgbFydU9W2KfAd8OoFJvtbpdkPB3xcV6kw8cY_nwxtL32T2T93hpK_GTuHacfjVTHpBx56trkqeCuDoZ2__KcwZLpuraxCAOVCjf7nNv8csVpbU"/>
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-indigo-600 text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-xs font-bold text-slate-700">AI Figure Generated</span>
+</div>
+<div class="flex gap-2">
+<div class="w-6 h-6 rounded-md bg-slate-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">download</span>
+</div>
+<div class="w-6 h-6 rounded-md bg-indigo-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-white">share</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Grid -->
+<section class="py-24">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-3xl lg:text-4xl font-black tracking-tight text-slate-900">두 개의 워크스페이스, 하나의 워크플로</h2>
+<p class="text-muted max-w-2xl mx-auto text-lg">연구 데이터 수집부터 최종 발행까지, 모든 과정을 하나의 도구에서 해결하세요.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="group bg-white p-8 rounded-xl border border-slate-200 hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-50/50 transition-all duration-300">
+<div class="w-14 h-14 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">schema</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-slate-900">Paper→Figure</h3>
+<p class="text-muted leading-relaxed">
+                        논문의 텍스트와 수식을 분석하여 학술적 가치가 높은 고해상도 다이어그램과 일러스트레이션으로 즉시 변환합니다.
+                    </p>
+</div>
+<!-- Feature 2 -->
+<div class="group bg-white p-8 rounded-xl border border-slate-200 hover:border-violet-200 hover:shadow-xl hover:shadow-violet-50/50 transition-all duration-300">
+<div class="w-14 h-14 rounded-xl bg-violet-50 flex items-center justify-center text-violet-600 mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">edit_note</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-slate-900">Dev Log→Blog</h3>
+<p class="text-muted leading-relaxed">
+                        정제되지 않은 에러 로그와 짧은 작업 메모를 SEO에 최적화된 전문적인 기술 블로그 포스트 초안으로 재구성합니다.
+                    </p>
+</div>
+<!-- Feature 3 -->
+<div class="group bg-white p-8 rounded-xl border border-slate-200 hover:border-amber-200 hover:shadow-xl hover:shadow-amber-50/50 transition-all duration-300">
+<div class="w-14 h-14 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600 mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">inventory_2</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-slate-900">Reusable Library</h3>
+<p class="text-muted leading-relaxed">
+                        생성된 모든 시각 자료와 텍스트 자산을 프로젝트별로 관리하고, 필요할 때마다 언제든 다시 편집하고 내보낼 수 있습니다.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Workflow Section -->
+<section class="py-24 bg-indigo-900 rounded-[2rem] px-8 lg:px-16 overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="Abstract network of interconnected nodes and lines in a futuristic blue and white aesthetic representing digital transformation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-e2YUGRv70RmrG1oOJVUPwjEVH0AxPe0CatlaKQtaECOAxdemQp28t4u96EmeTnMlm3L4TFB7mrPMeFp8FvBYZ30wsWgLtH82Vij50m6ZJ5dAWU9dY3IJtI7x3e76dBebhVXz61YbyanKhKhftkwI4XI1fzhac9QSiUPlNzfsGDlb3nrB1U_K_tKvFxKyixOr4DeN4kisRfZLK7BfYr8ifxHc3y451Y2QPvoLU02mDi6kietaxZWFGn_cwVREVe90g7T0r6lrB7Q"/>
+</div>
+<div class="relative z-10">
+<div class="max-w-xl mb-16">
+<h2 class="text-3xl lg:text-4xl font-black text-white mb-4">3단계 변환 워크플로</h2>
+<p class="text-indigo-100/70 text-lg">AI가 복잡한 데이터를 구조화하고 결과물을 도출하는 과정입니다.</p>
+</div>
+<div class="grid lg:grid-cols-3 gap-12">
+<!-- Step 1 -->
+<div class="relative">
+<div class="text-6xl font-black text-indigo-800 absolute -top-8 -left-4 opacity-50">01</div>
+<div class="relative pt-4 space-y-4">
+<h4 class="text-xl font-bold text-white">데이터 업로드</h4>
+<p class="text-indigo-100/60 leading-relaxed">PDF 논문, 마크다운 문서, 혹은 로컬 서버의 로그 텍스트를 드래그 앤 드롭으로 업로드하세요.</p>
+<div class="h-1 w-12 bg-indigo-500 rounded-full"></div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<div class="text-6xl font-black text-indigo-800 absolute -top-8 -left-4 opacity-50">02</div>
+<div class="relative pt-4 space-y-4">
+<h4 class="text-xl font-bold text-white">AI 맥락 분석</h4>
+<p class="text-indigo-100/60 leading-relaxed">자체 LLM이 데이터의 구조를 파악하고, 시각화 요소와 핵심 인사이트를 자동으로 분류합니다.</p>
+<div class="h-1 w-12 bg-indigo-500 rounded-full"></div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<div class="text-6xl font-black text-indigo-800 absolute -top-8 -left-4 opacity-50">03</div>
+<div class="relative pt-4 space-y-4">
+<h4 class="text-xl font-bold text-white">최종 결과물 생성</h4>
+<p class="text-indigo-100/60 leading-relaxed">고해상도 SVG 다이어그램이나 완성도 높은 기술 블로그 포스트를 즉시 다운로드하거나 발행하세요.</p>
+<div class="h-1 w-12 bg-indigo-500 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom CTA -->
+<section class="py-32 text-center">
+<div class="max-w-3xl mx-auto px-6 py-16 bg-white border border-slate-200 rounded-[2.5rem] shadow-2xl shadow-indigo-100 relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-amber-100/30 rounded-full blur-3xl"></div>
+<div class="relative z-10 space-y-8">
+<span class="inline-block bg-amber-100 text-amber-700 text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">Beta Access</span>
+<h2 class="text-4xl lg:text-5xl font-black text-slate-900 leading-tight">연구와 기록의 시간을<br/>절반으로 줄이세요.</h2>
+<p class="text-muted text-lg max-w-xl mx-auto">지금 가입하면 베타 기간 동안 모든 생성 기능을 무제한으로 사용해 볼 수 있습니다.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="bg-indigo-600 text-white px-10 py-5 rounded-2xl font-black text-xl shadow-xl shadow-indigo-200 hover:bg-indigo-700 active:scale-95 transition-all w-full sm:w-auto">Start for Free</button>
+<p class="text-slate-400 text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">lock</span>
+                            No credit card required
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 full-width py-12">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-6 w-full space-y-4 md:space-y-0">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="text-lg font-bold text-slate-900 dark:text-white">text-to-image</div>
+<p class="text-sm font-normal text-slate-500 dark:text-slate-400 text-center md:text-left max-w-xs">© 2024 text-to-image. AI-powered workspace for researchers and developers.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-sm font-normal text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-sm font-normal text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-sm font-normal text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="text-sm font-normal text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+</div>
+</div>
+</footer>
+</body></html>

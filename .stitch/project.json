@@ -1,0 +1,20 @@
+{
+  "projectId": "5941339104426296696",
+  "designSystemAssetId": "2493843944968742247",
+  "title": "text-to-image",
+  "createdAt": "2026-04-25T00:00:00Z",
+  "concept": "논문을 그림으로, 개발기록 또는 트러블슈팅 내용을 기술블로그로 작성해주는 컨셉",
+  "conceptCategory": "AI · Productivity · Research SaaS (with edu/research warmth)",
+  "fallbackUsed": false,
+  "resolvedTokens": {
+    "primary": "#6366F1",
+    "secondary": "#8B5CF6",
+    "accent": "#F59E0B",
+    "headlineFont": "GEIST",
+    "bodyFont": "GEIST",
+    "labelFont": "INTER",
+    "roundness": "ROUND_TWELVE",
+    "colorMode": "LIGHT",
+    "colorVariant": "TONAL_SPOT"
+  }
+}
