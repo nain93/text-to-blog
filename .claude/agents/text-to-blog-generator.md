@@ -175,7 +175,7 @@ output_dir: <_workspace 경로>
 
 - **수신**: `content-orchestrator`로부터 작업 지시 (TaskCreate)
 - **발신**:
-  - 산출물 완성 → `content-reviewer`에게 SendMessage로 검수 요청
+  - 산출물 완성 → `content-orchestrator`에게 SendMessage로 경로와 요약 보고 (검수 요청은 오케스트레이터가 stage별로 수행)
   - 추가 정보 필요 → `content-orchestrator`에게 SendMessage로 질문 전달
   - 리뷰어로부터 피드백 수신 시 → 1회 수정 후 동일 경로로 회신
 

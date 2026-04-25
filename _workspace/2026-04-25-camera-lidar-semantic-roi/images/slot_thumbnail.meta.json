@@ -1,0 +1,28 @@
+﻿{
+  "schema_version": "1.1",
+  "slot_id": "thumbnail",
+  "purpose": "blog_thumbnail",
+  "aspect_ratio": "16:9",
+  "resolution": "1280x720",
+  "style": "technical flat illustration",
+  "mood": "clean, focused",
+  "color_palette": ["slate", "green", "sky blue", "orange"],
+  "diagram_type": null,
+  "prompt_en": "A clean technical flat illustration of camera and LiDAR sensor fusion selecting semantic ROI points on a road scene for autonomous driving perception.",
+  "prompt_ko": "Camera? LiDAR ?쇱꽌 ?⑥쟾?쇰줈 ?꾨줈 ?λ㈃??semantic ROI point瑜??좏깮?섎뒗 湲곗닠 ?쇰윭?ㅽ듃",
+  "negative_prompt": "real brand logos, real people, cluttered text labels, low quality",
+  "diagram_source": null,
+  "tool_used": "svg",
+  "model_id": null,
+  "must_show_self_eval": [
+    {"item": "camera", "represented": true},
+    {"item": "LiDAR", "represented": true},
+    {"item": "?꾨줈 ?λ㈃", "represented": true},
+    {"item": "?좏깮??ROI point", "represented": true}
+  ],
+  "generated_at": "2026-04-25T00:00:00+09:00",
+  "file_path": "_workspace/2026-04-25-camera-lidar-semantic-roi/images/slot_thumbnail.svg",
+  "alt_text_ko": "Camera-LiDAR ?⑥쟾?쇰줈 ?꾨줈 ROI point瑜?怨좊Ⅴ???λ㈃",
+  "review_hints": [],
+  "notes": "?몃? ?대?吏 API ?놁씠 濡쒖뺄 SVG濡??앹꽦"
+}

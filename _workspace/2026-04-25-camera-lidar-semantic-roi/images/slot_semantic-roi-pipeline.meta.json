@@ -1,0 +1,29 @@
+﻿{
+  "schema_version": "1.1",
+  "slot_id": "semantic-roi-pipeline",
+  "purpose": "illustration",
+  "aspect_ratio": "16:9",
+  "resolution": "1280x720",
+  "style": "diagram",
+  "mood": "neutral, technical",
+  "color_palette": ["sky blue", "green", "orange", "slate", "violet"],
+  "diagram_type": "flow",
+  "prompt_en": "Flow diagram showing Camera image to YOLOP road mask, YOLOv8-seg object mask, semantic mask union, LiDAR point projection, mask check, and Semantic ROI point selection.",
+  "prompt_ko": "YOLOP ?꾨줈 mask, YOLOv8-seg 媛앹껜 mask, LiDAR projection, semantic ROI ?좏깮 ?먮쫫??,
+  "negative_prompt": "unreadable labels, excessive equations, clutter",
+  "diagram_source": "flowchart LR; Camera image -> YOLOP road mask; Camera image -> YOLOv8-seg object mask; masks -> Semantic mask union; LiDAR point cloud -> Project points to image plane; check pixel inside semantic mask; keep or discard point",
+  "tool_used": "svg",
+  "model_id": null,
+  "must_show_self_eval": [
+    {"item": "Camera image", "represented": true},
+    {"item": "YOLOP road mask", "represented": true},
+    {"item": "YOLOv8-seg object mask", "represented": true},
+    {"item": "LiDAR point projection", "represented": true},
+    {"item": "Semantic ROI", "represented": true}
+  ],
+  "generated_at": "2026-04-25T00:00:00+09:00",
+  "file_path": "_workspace/2026-04-25-camera-lidar-semantic-roi/images/slot_semantic-roi-pipeline.svg",
+  "alt_text_ko": "YOLOP? YOLOv8-seg mask濡?LiDAR point瑜??꾪꽣留곹븯???먮쫫??,
+  "review_hints": [],
+  "notes": "Mermaid ?뚯뒪? ?숈씪???먮쫫??濡쒖뺄 SVG濡??뚮뜑留?
+}

@@ -1,0 +1,28 @@
+﻿{
+  "schema_version": "1.1",
+  "stage": "images_only",
+  "review_round": 1,
+  "verdict": "pass",
+  "total_score": 0.90,
+  "image_quality_review": {
+    "applicable": true,
+    "score": 0.90,
+    "per_slot": [
+      {"slot_id": "thumbnail", "score": 0.90, "failed": []},
+      {"slot_id": "semantic-roi-pipeline", "score": 0.92, "failed": []},
+      {"slot_id": "roi-performance-comparison", "score": 0.88, "failed": []}
+    ]
+  },
+  "slot_image_match_review": {
+    "applicable": true,
+    "score": 0.91,
+    "per_slot_must_show": [
+      {"slot_id": "thumbnail", "must_show_coverage": 1.0},
+      {"slot_id": "semantic-roi-pipeline", "must_show_coverage": 1.0},
+      {"slot_id": "roi-performance-comparison", "must_show_coverage": 1.0}
+    ]
+  },
+  "summary_for_human": "???대?吏 紐⑤몢 ?щ’ 紐낆꽭??must_show瑜?異⑹”?섎ŉ, ?ㅼ씠?닿렇???쇰꺼??SVG ?띿뒪?몃줈 媛??媛?ν븿.",
+  "next_action_recommendation": "placeholder 移섑솚 ??integrated 寃??吏꾪뻾.",
+  "reviewed_at": "2026-04-25T00:00:00+09:00"
+}

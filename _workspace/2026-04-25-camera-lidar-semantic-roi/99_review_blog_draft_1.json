@@ -1,0 +1,25 @@
+﻿{
+  "schema_version": "1.1",
+  "stage": "blog_draft",
+  "review_round": 1,
+  "verdict": "pass",
+  "total_score": 0.91,
+  "blog_review": {
+    "applicable": true,
+    "score": 0.90,
+    "passed": ["?먮낯 ?뺥빀??, "援ъ“/湲몄씠", "臾몄껜(AI ??", "?뺥솗??, "SEO/硫뷀??곗씠??],
+    "failed": []
+  },
+  "slot_decision_review": {
+    "applicable": true,
+    "score": 0.93,
+    "decisions": [
+      {"slot_id": "thumbnail", "verdict": "appropriate"},
+      {"slot_id": "semantic-roi-pipeline", "verdict": "appropriate"},
+      {"slot_id": "roi-performance-comparison", "verdict": "appropriate"}
+    ]
+  },
+  "summary_for_human": "?먮낯 ?섏튂? ?듭떖 援ъ“媛 蹂댁〈?먭퀬, ?대?吏 ?щ’? ?뚯씠?꾨씪?멸낵 ?깅뒫 鍮꾧탳泥섎읆 湲留뚯쑝濡??ㅻ챸???대젮??吏?먯뿉 諛곗튂??",
+  "next_action_recommendation": "?대?吏 ?앹꽦 ?④퀎濡?吏꾪뻾.",
+  "reviewed_at": "2026-04-25T00:00:00+09:00"
+}

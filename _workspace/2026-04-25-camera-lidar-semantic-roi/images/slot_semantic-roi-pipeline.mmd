@@ -1,0 +1,10 @@
+﻿flowchart LR
+  A[Camera image] --> B[YOLOP road mask]
+  A --> C[YOLOv8-seg object mask]
+  B --> D[Semantic mask union]
+  C --> D
+  E[LiDAR point cloud] --> F[Project points to image plane]
+  F --> G{Pixel inside semantic mask?}
+  D --> G
+  G -->|yes| H[Keep point in Semantic ROI]
+  G -->|no| I[Discard point]

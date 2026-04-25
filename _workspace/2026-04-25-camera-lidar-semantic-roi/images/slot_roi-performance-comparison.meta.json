@@ -1,0 +1,31 @@
+﻿{
+  "schema_version": "1.1",
+  "slot_id": "roi-performance-comparison",
+  "purpose": "illustration",
+  "aspect_ratio": "16:9",
+  "resolution": "1280x720",
+  "style": "comparison chart",
+  "mood": "objective, analytical",
+  "color_palette": ["orange", "green", "sky blue", "slate"],
+  "diagram_type": "comparison",
+  "prompt_en": "Comparison chart for Geometric ROI, Waypoint ROI, and Semantic ROI using LiDAR point count, OPR, OPPR, and processing time from the paper.",
+  "prompt_ko": "Geometric ROI, Waypoint ROI, Semantic ROI??point ?? OPR, OPPR, 泥섎━ ?쒓컙 鍮꾧탳 李⑦듃",
+  "negative_prompt": "distorted values, missing axes, color-only distinction",
+  "diagram_source": "Values: Geometric 11785 points, OPR 0.0486, OPPR 1.0000, 43.73 ms; Waypoint 7691 points, OPR 0.0202, OPPR 0.2328, 80.26 ms; Semantic 7611 points, OPR 0.0997, OPPR 0.8235, 77.55 ms.",
+  "tool_used": "svg",
+  "model_id": null,
+  "must_show_self_eval": [
+    {"item": "Geometric ROI", "represented": true},
+    {"item": "Waypoint ROI", "represented": true},
+    {"item": "Semantic ROI", "represented": true},
+    {"item": "LiDAR point count", "represented": true},
+    {"item": "OPR", "represented": true},
+    {"item": "OPPR", "represented": true},
+    {"item": "processing time", "represented": true}
+  ],
+  "generated_at": "2026-04-25T00:00:00+09:00",
+  "file_path": "_workspace/2026-04-25-camera-lidar-semantic-roi/images/slot_roi-performance-comparison.svg",
+  "alt_text_ko": "??ROI 諛⑹떇??point ?? OPR, OPPR, 泥섎━ ?쒓컙??鍮꾧탳??李⑦듃",
+  "review_hints": [],
+  "notes": "?쇰Ц ??1???섏튂瑜?吏곸젒 諛섏쁺??濡쒖뺄 SVG 李⑦듃"
+}

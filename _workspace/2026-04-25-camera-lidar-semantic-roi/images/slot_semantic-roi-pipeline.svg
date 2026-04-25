@@ -1,0 +1,50 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="YOLOP, YOLOv8-seg, LiDAR projection??嫄곗퀜 Semantic ROI瑜?留뚮뱶???뚯씠?꾨씪??>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#0f172a">Semantic ROI Pipeline</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <g font-family="Arial, sans-serif" font-size="20" fill="#0f172a">
+    <rect x="70" y="145" width="210" height="88" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+    <text x="175" y="181" text-anchor="middle" font-weight="700">Camera image</text>
+    <text x="175" y="211" text-anchor="middle" fill="#475569">front view</text>
+    <rect x="355" y="100" width="230" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="470" y="134" text-anchor="middle" font-weight="700">YOLOP</text>
+    <text x="470" y="163" text-anchor="middle" fill="#475569">road mask</text>
+    <rect x="355" y="235" width="230" height="80" rx="10" fill="#ffedd5" stroke="#f97316" stroke-width="3"/>
+    <text x="470" y="269" text-anchor="middle" font-weight="700">YOLOv8-seg</text>
+    <text x="470" y="298" text-anchor="middle" fill="#475569">object mask</text>
+    <rect x="675" y="165" width="230" height="88" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="3"/>
+    <text x="790" y="201" text-anchor="middle" font-weight="700">Semantic mask</text>
+    <text x="790" y="231" text-anchor="middle" fill="#475569">road union object</text>
+    <rect x="70" y="470" width="210" height="88" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="175" y="505" text-anchor="middle" font-weight="700">LiDAR point</text>
+    <text x="175" y="535" text-anchor="middle" fill="#475569">3D cloud</text>
+    <rect x="355" y="470" width="230" height="88" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+    <text x="470" y="505" text-anchor="middle" font-weight="700">Projection</text>
+    <text x="470" y="535" text-anchor="middle" fill="#475569">3D to image plane</text>
+    <path d="M790 420 L900 500 L790 580 L680 500 Z" fill="#fef9c3" stroke="#ca8a04" stroke-width="3"/>
+    <text x="790" y="493" text-anchor="middle" font-weight="700">Inside</text>
+    <text x="790" y="522" text-anchor="middle" fill="#475569">semantic mask?</text>
+    <rect x="990" y="430" width="220" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="1100" y="464" text-anchor="middle" font-weight="700">Keep point</text>
+    <text x="1100" y="493" text-anchor="middle" fill="#475569">Semantic ROI</text>
+    <rect x="990" y="555" width="220" height="70" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+    <text x="1100" y="598" text-anchor="middle" font-weight="700">Discard point</text>
+  </g>
+  <g stroke="#64748b" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M280 178 C315 150 325 140 355 140"/>
+    <path d="M280 200 C320 230 325 275 355 275"/>
+    <path d="M585 140 C625 145 645 175 675 190"/>
+    <path d="M585 275 C630 265 645 235 675 220"/>
+    <path d="M280 514 L355 514"/>
+    <path d="M585 514 L680 514"/>
+    <path d="M790 253 L790 420"/>
+    <path d="M900 500 L990 470"/>
+    <path d="M865 555 C905 590 940 592 990 590"/>
+  </g>
+  <text x="945" y="462" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#16a34a">yes</text>
+  <text x="930" y="612" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#dc2626">no</text>
+</svg>

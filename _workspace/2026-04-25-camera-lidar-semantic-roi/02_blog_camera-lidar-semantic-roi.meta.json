@@ -1,0 +1,70 @@
+﻿{
+  "schema_version": "1.1",
+  "title": "Camera-LiDAR ?쇱꽌 ?⑥쟾?쇰줈 LiDAR ROI瑜????묐삊?섍쾶 以꾩씠??諛⑸쾿",
+  "slug": "camera-lidar-semantic-roi",
+  "language": "ko",
+  "tone": "鍮꾧탳?됯?",
+  "target_length": "medium",
+  "char_count": 3089,
+  "section_count": 4,
+  "code_block_count": 0,
+  "code_languages": [],
+  "paar_coverage": {
+    "problem": true,
+    "action": true,
+    "analysis": true,
+    "result": true
+  },
+  "result_has_quantitative": true,
+  "gaps": [],
+  "seo_keyword_candidates": [
+    "Camera LiDAR ?쇱꽌 ?⑥쟾",
+    "Semantic ROI",
+    "?먯쑉二쇳뻾 ?몄? ?⑥쑉",
+    "LiDAR point cloud ?꾩쿂由?
+  ],
+  "target_channel": "velog",
+  "ai_tone_violations": [],
+  "draft_file_path": "_workspace/2026-04-25-camera-lidar-semantic-roi/02_blog_camera-lidar-semantic-roi.draft.md",
+  "final_file_path": "_workspace/2026-04-25-camera-lidar-semantic-roi/02_blog_camera-lidar-semantic-roi.md",
+  "image_slots": [
+    {
+      "id": "thumbnail",
+      "purpose": "blog_thumbnail",
+      "intent": "Camera? LiDAR媛 ?④퍡 ?꾨줈 ?λ㈃??蹂닿퀬, semantic ROI濡??꾩슂??point留??④린??湲???듭떖?????μ쑝濡??붿빟",
+      "must_show": ["camera", "LiDAR", "?꾨줈 ?λ㈃", "?좏깮??ROI point"],
+      "must_avoid": ["?ㅼ〈 李⑤웾 濡쒓퀬", "?ㅼ〈 ?몃Ъ", "怨쇰룄???띿뒪???쇰꺼"],
+      "style_hint": "technical flat illustration",
+      "mood_hint": "clean, focused",
+      "aspect_ratio": "16:9",
+      "diagram_type": null,
+      "context_excerpt": "LiDAR point cloud ?꾩껜 泥섎━???곗궛 遺?닿낵 Camera-LiDAR semantic ROI??臾몄젣 ?닿껐 諛⑺뼢???뚭컻?섎뒗 ?꾩엯遺"
+    },
+    {
+      "id": "semantic-roi-pipeline",
+      "purpose": "illustration",
+      "intent": "YOLOP ?꾨줈 mask, YOLOv8-seg 媛앹껜 mask, LiDAR projection, semantic ROI ?좏깮源뚯? ?댁뼱吏??泥섎━ ?먮쫫???쒓컖??,
+      "must_show": ["Camera image", "YOLOP road mask", "YOLOv8-seg object mask", "LiDAR point projection", "Semantic ROI"],
+      "must_avoid": ["蹂듭옟???섏떇 怨쇰떎 ?쒓린", "?쎄린 ?대젮???묒? ?쇰꺼"],
+      "style_hint": "diagram",
+      "mood_hint": "neutral, technical",
+      "aspect_ratio": "16:9",
+      "diagram_type": "flow",
+      "context_excerpt": "?쒖븞 諛⑹떇? YOLOP, YOLOv8-seg, LiDAR point projection??嫄곗퀜 semantic mask ?덉쓽 point留?ROI濡??좏깮?쒕떎."
+    },
+    {
+      "id": "roi-performance-comparison",
+      "purpose": "illustration",
+      "intent": "Geometric ROI, Waypoint ROI, Semantic ROI??point ?? OPR, OPPR, 泥섎━ ?쒓컙??鍮꾧탳??semantic ROI???λ떒?먯쓣 蹂댁뿬以??,
+      "must_show": ["Geometric ROI", "Waypoint ROI", "Semantic ROI", "LiDAR point count", "OPR", "OPPR", "processing time"],
+      "must_avoid": ["?섏튂 ?쒓끝", "異??녿뒗 洹몃옒??, "?됱긽留뚯쑝濡?援щ텇"],
+      "style_hint": "comparison chart",
+      "mood_hint": "objective, analytical",
+      "aspect_ratio": "16:9",
+      "diagram_type": "comparison",
+      "context_excerpt": "Semantic ROI???됯퇏 point ??7611媛? OPR 0.0997, OPPR 0.8235, 泥섎━ ?쒓컙 77.55ms瑜?湲곕줉?덈떎."
+    }
+  ],
+  "generated_at": "2026-04-25T00:00:00+09:00",
+  "review_hints": []
+}
